@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 1183671265}
-  obstaclePrefab: {fileID: 8872066452297259089, guid: ea64f003a1d29fc4bac7b8e72247c4ad, type: 3}
+  pool: {fileID: 255484001}
 --- !u!4 &132895512
 Transform:
   m_ObjectHideFlags: 0
@@ -191,14 +191,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170076733}
   m_Enabled: 1
-  serializedVersion: 12
+  serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.802082
-  m_CookieSize2D: {x: 10, y: 10}
+  m_CookieSize: 10
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
@@ -292,10 +292,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea0de11d4fe47246812b5037d39d6e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleObjectPool
-  obstacleBarrelPrefab: {fileID: 151586, guid: 95927758d3a4cef4ba6c4318f06876fd, type: 3}
-  obstacleBarrierPrefab: {fileID: 181666, guid: ee7d0c4ddd804dd4e95f705d43c9135e, type: 3}
-  obstacleStoneWallPrefab: {fileID: 1574251093279545299, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
-  poolSize: 10
+  obstacleBarrelPrefab: {fileID: 1951461062}
+  obstacleBarrierPrefab: {fileID: 1951461062}
+  obstacleStoneWallPrefab: {fileID: 1951461062}
+  poolSize: 5
 --- !u!4 &255484002
 Transform:
   m_ObjectHideFlags: 0
@@ -425,7 +425,6 @@ GameObject:
   m_IsActive: 1
 --- !u!212 &835818920
 SpriteRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -471,7 +470,6 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 640fa9e54570b4acbbc4acf8f3bf8663, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -481,6 +479,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &835818921
 Transform:
@@ -574,6 +573,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 132895512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1951461062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8872066452297259089, guid: ea64f003a1d29fc4bac7b8e72247c4ad, type: 3}
+  m_PrefabInstance: {fileID: 9057399244489738227}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2014335011
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,7 +665,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2014335014
 MeshFilter:
@@ -700,15 +703,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4405728185080775720, guid: f2132836654cce146ae0fd83d2dc2a2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 18.98
       objectReference: {fileID: 0}
     - target: {fileID: 4405728185080775720, guid: f2132836654cce146ae0fd83d2dc2a2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -20.32
       objectReference: {fileID: 0}
     - target: {fileID: 4405728185080775720, guid: f2132836654cce146ae0fd83d2dc2a2d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4405728185080775720, guid: f2132836654cce146ae0fd83d2dc2a2d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -833,12 +836,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1893900653794064249, guid: ea64f003a1d29fc4bac7b8e72247c4ad, type: 3}
+      propertyPath: pool
+      value: 
+      objectReference: {fileID: 255484001}
+    - target: {fileID: 1893900653794064249, guid: ea64f003a1d29fc4bac7b8e72247c4ad, type: 3}
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5714885907454197809, guid: ea64f003a1d29fc4bac7b8e72247c4ad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14
+      value: 10.03
       objectReference: {fileID: 0}
     - target: {fileID: 5714885907454197809, guid: ea64f003a1d29fc4bac7b8e72247c4ad, type: 3}
       propertyPath: m_LocalPosition.y
