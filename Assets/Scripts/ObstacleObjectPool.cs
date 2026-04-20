@@ -46,7 +46,7 @@ public class ObstacleObjectPool : MonoBehaviour
             }
         }
 
-        GameObject newObj = CreateNew(GetPrefab(obstacleType));
+        var newObj = CreateNew(GetPrefab(obstacleType));
         newObj.SetActive(true);
         pool.Add(newObj);
         return newObj;
